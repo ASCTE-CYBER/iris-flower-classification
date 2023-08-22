@@ -21,11 +21,11 @@ training_inputs = [np.array([input]) for input in training_inputs]
 training_outputs = data['species'].to_list()
 
 layers = [
-    FullyConnected(4, 2),
-    Activation(Sigmoid),
-    FullyConnected(2, 2),
-    Activation(Sigmoid),
-    FullyConnected(2, 1)
+  FullyConnected(4, 6),
+  Activation(Sigmoid),
+  FullyConnected(6, 3),
+  Activation(Sigmoid),
+  FullyConnected(3, 1)
 ]
 
 network = Network(layers, MeanSquaredError)
