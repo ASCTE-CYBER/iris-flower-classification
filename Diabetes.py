@@ -4,4 +4,4 @@ from pprint import pprint # Nice format for printing
 
 data = load_diabetes()
 
-data.data
+pprint(data.keys())
